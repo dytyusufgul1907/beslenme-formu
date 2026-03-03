@@ -195,15 +195,124 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   </div>
 
   <div class="fg">
-    <div class="field"><label>Nerede çalışıyorsunuz? <span class="req">*</span></label>
+    <div class="field"><label>Çalışma Durumunuz <span class="req">*</span></label>
     <div class="rg" id="calisma-rg">
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Evden')"><input type="radio" name="calisma_yeri" value="Evden"><div class="ind"></div>🏠 Evden</label>
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','İşyerinde')"><input type="radio" name="calisma_yeri" value="İşyerinde"><div class="ind"></div>🏢 İşyerinde</label>
+      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Evden çalışıyorum')"><input type="radio" name="calisma_yeri" value="Evden çalışıyorum"><div class="ind"></div>🏠 Evden çalışıyorum</label>
+      <label class="ro" onclick="handleRadio(this,'calisma_yeri','İşyerinde çalışıyorum')"><input type="radio" name="calisma_yeri" value="İşyerinde çalışıyorum"><div class="ind"></div>🏢 İşyerinde çalışıyorum</label>
       <label class="ro" onclick="handleRadio(this,'calisma_yeri','Karma (hem ev hem işyeri)')"><input type="radio" name="calisma_yeri" value="Karma (hem ev hem işyeri)"><div class="ind"></div>🔄 Karma</label>
+      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Öğrenciyim')"><input type="radio" name="calisma_yeri" value="Öğrenciyim"><div class="ind"></div>🎓 Öğrenciyim</label>
+      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Çalışmıyorum')"><input type="radio" name="calisma_yeri" value="Çalışmıyorum"><div class="ind"></div>🏡 Çalışmıyorum</label>
     </div>
     <span class="field-note">Bu seçim bazı soruları otomatik gösterecek/gizleyecek</span>
     </div>
   </div>
+
+  <!-- BEDEN ÖLÇÜLERİ -->
+  <div style="margin-top:36px;">
+    <div class="sub-head">📏 Beden <em>Ölçüleri</em></div>
+    <div class="info-box" style="margin-bottom:20px;">
+      📌 Ölçüleri sabah aç karna, ayakta dik dururken alın. Mezuru cilde değdirir ama sıkıştırmadan tutun. Her bölge için cm cinsinden girin — dolduramadığınız alanları boş bırakabilirsiniz.
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Boy (cm)</label>
+        <input type="number" name="boy" placeholder="Örn: 165" min="100" max="220">
+      </div>
+      <div class="field">
+        <label>Kilo (kg)</label>
+        <input type="number" name="kilo" placeholder="Örn: 68" min="30" max="300" step="0.1">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>İnce Bel (cm)</label>
+        <span class="field-note">Göbeğin 2-3 parmak üstü, en ince nokta</span>
+        <input type="number" name="ince_bel" placeholder="cm" min="40" max="200" step="0.5">
+      </div>
+      <div class="field">
+        <label>Göbek / Orta Bel (cm)</label>
+        <span class="field-note">Göbek deliğinin tam hizasından</span>
+        <input type="number" name="gobek_bel" placeholder="cm" min="40" max="200" step="0.5">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Kalın Bel / Alt Karın (cm)</label>
+        <span class="field-note">Göbeğin 2-3 parmak altı, en geniş nokta</span>
+        <input type="number" name="kalin_bel" placeholder="cm" min="40" max="200" step="0.5">
+      </div>
+      <div class="field">
+        <label>Kalça (cm)</label>
+        <span class="field-note">Kalçanın en geniş, en çıkıntılı noktasından</span>
+        <input type="number" name="kalca" placeholder="cm" min="40" max="200" step="0.5">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Göğüs (cm)</label>
+        <span class="field-note">Kolların altından, göğsün en geniş yerinden</span>
+        <input type="number" name="gogus" placeholder="cm" min="40" max="200" step="0.5">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Sağ Uyluk (cm)</label>
+        <span class="field-note">Kasığın 10 cm altından, bacağı hafif açarak</span>
+        <input type="number" name="sag_uyluk" placeholder="cm" min="20" max="120" step="0.5">
+      </div>
+      <div class="field">
+        <label>Sol Uyluk (cm)</label>
+        <span class="field-note">Aynı noktadan sol bacak</span>
+        <input type="number" name="sol_uyluk" placeholder="cm" min="20" max="120" step="0.5">
+      </div>
+    </div>
+
+
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Sağ Baldır (cm)</label>
+        <span class="field-note">Baldırın en şişkin, en geniş noktasından</span>
+        <input type="number" name="sag_baldir" placeholder="cm" min="20" max="100" step="0.5">
+      </div>
+      <div class="field">
+        <label>Sol Baldır (cm)</label>
+        <span class="field-note">Aynı noktadan sol bacak</span>
+        <input type="number" name="sol_baldir" placeholder="cm" min="20" max="100" step="0.5">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Sağ Kol (cm)</label>
+        <span class="field-note">Omuz ile dirsek arası, en şişkin noktadan, kol serbest</span>
+        <input type="number" name="sag_kol" placeholder="cm" min="10" max="80" step="0.5">
+      </div>
+      <div class="field">
+        <label>Sol Kol (cm)</label>
+        <span class="field-note">Aynı noktadan sol kol</span>
+        <input type="number" name="sol_kol" placeholder="cm" min="10" max="80" step="0.5">
+      </div>
+    </div>
+
+    <div class="fg c2">
+      <div class="field">
+        <label>Ölçüm Tarihi</label>
+        <input type="date" name="olcum_tarihi">
+      </div>
+      <div class="field">
+        <label>Ölçüm Alınan Cihaz</label>
+        <input type="text" name="olcum_cihaz" placeholder="..................">
+      </div>
+    </div>
+  </div>
+
+
 </div>
 
 <!-- ── BÖLÜM 2: SAĞLIK ── -->
@@ -252,6 +361,18 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <label class="ro" onclick="handleRadio(this,'detoks','Bilmiyorum')"><input type="radio" name="detoks" value="Bilmiyorum"><div class="ind"></div>Bilmiyorum</label>
     </div></div>
   </div>
+  <div class="fg c2">
+    <div class="field">
+      <label>Beslenme davranışlarınız için psikolojik destek aldınız mı?</label>
+      <div class="rg" id="psiko-rg">
+        <label class="ro" onclick="handleRadio(this,'psiko_destek','Hayır, almadım')"><input type="radio" name="psiko_destek" value="Hayır, almadım"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,'psiko_destek','Evet, şu an alıyorum')"><input type="radio" name="psiko_destek" value="Evet, şu an alıyorum"><div class="ind"></div>Evet, alıyorum</label>
+        <label class="ro" onclick="handleRadio(this,'psiko_destek','Geçmişte aldım')"><input type="radio" name="psiko_destek" value="Geçmişte aldım"><div class="ind"></div>Geçmişte aldım</label>
+      </div>
+      <span class="field-note">Psikolog veya psikiyatrist desteği</span>
+    </div>
+  </div>
+
   <div class="fg">
     <div class="field">
       <label>BANA VÜCUDUNUZU ANLATIN! 🙂</label>
@@ -512,6 +633,13 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <label class="co"><input type="checkbox" name="aksam_protein" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
     </div></div>
   </div>
+  <div class="fg">
+    <div class="field">
+      <label>Akşam yemeğinde farklı bir şey yapıyor musunuz?</label>
+      <textarea name="aksam_farkli" placeholder="Örn: Hafta sonu dışarı çıkıyoruz, bazen atıştırmalıkla geçiştiriyorum, çorba içiyorum sadece... İstediğiniz şekilde belirtebilirsiniz."></textarea>
+    </div>
+  </div>
+
   <div class="fg c2">
     <div class="field"><label>Akşam sebze yemeği</label>
     <div class="rg">
@@ -561,6 +689,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <label class="co"><input type="checkbox" name="takviye" value="Glutamin"><div class="ind"></div>Glutamin</label>
       <label class="co"><input type="checkbox" name="takviye" value="Arginin"><div class="ind"></div>Arginin</label>
       <label class="co"><input type="checkbox" name="takviye" value="Ginseng"><div class="ind"></div>Ginseng</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Probiyotik"><div class="ind"></div>Probiyotik</label>
     </div></div>
   </div>
   <div class="fg">
@@ -589,6 +718,8 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
         <label class="co"><input type="checkbox" name="yeme_davraniş" value="Yediklerimi kalori sayarak takip ediyorum"><div class="ind"></div>Yediklerimi kalori sayarak takip ediyorum</label>
         <label class="co"><input type="checkbox" name="yeme_davraniş" value="Bazı besinleri tamamen yasakladım"><div class="ind"></div>Bazı besinleri kendime tamamen yasakladım</label>
         <label class="co"><input type="checkbox" name="yeme_davraniş" value="Duygusal yeme (stres, üzüntü, sıkıntı)"><div class="ind"></div>Stres veya üzüntü gelince yeme ihtiyacı duyuyorum</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Yedikten sonra kendimi cezalandırıyorum (egzersiz, aç kalma vb.)"><div class="ind"></div>Yedikten sonra kendimi cezalandırıyorum (egzersiz, aç kalma vb.)</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Yedikten sonra kusma ihtiyacı hissediyorum"><div class="ind"></div>Yedikten sonra kusma ihtiyacı hissediyorum</label>
         <label class="co"><input type="checkbox" name="yeme_davraniş" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
       </div>
     </div>
@@ -821,8 +952,8 @@ function toggleCond(id, show){
 }
 
 function applyConditions(){
-  const isEv = calismaYeri === 'Evden';
-  const isIsy = calismaYeri === 'İşyerinde';
+  const isEv = calismaYeri === 'Evden çalışıyorum' || calismaYeri === 'Çalışmıyorum' || calismaYeri === 'Öğrenciyim';
+  const isIsy = calismaYeri === 'İşyerinde çalışıyorum';
   const isKarma = calismaYeri === 'Karma (hem ev hem işyeri)';
   const showIsyeri = isIsy || isKarma;
   const showEvden = isEv || isKarma;
@@ -876,7 +1007,17 @@ const kvkk = document.getElementById('kvkk-input');
   const name = document.querySelector('[name="ad_soyad"]').value;
   const email = document.querySelector('[name="email"]').value;
   if(!name || !email){
-    alert('Lütfen en azından ad soyad ve e-posta alanlarını doldurun.');
+    alert('Lütfen ad soyad ve e-posta alanlarını doldurun.');
+    goTo(0); return;
+  }
+  const hedefler = document.querySelector('[name="hedefler"]').value;
+  if(!hedefler){
+    alert('Lütfen hedefler ve beklentiler alanını doldurun.');
+    goTo(0); return;
+  }
+  const calisma = document.querySelector('input[name="calisma_yeri"]:checked');
+  if(!calisma){
+    alert('Lütfen nerede çalıştığınızı seçin.');
     goTo(0); return;
   }
   document.querySelectorAll('.fsec').forEach(s => s.style.display='none');
