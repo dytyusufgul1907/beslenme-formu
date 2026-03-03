@@ -165,6 +165,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="pi" id="pi3" onclick="goTo(3)"><div class="pi-dot">4</div><div class="pi-lbl">Kahvaltı<br>Alışk.</div></div>
   <div class="pi" id="pi4" onclick="goTo(4)"><div class="pi-dot">5</div><div class="pi-lbl">Öğle &<br>Akşam</div></div>
   <div class="pi" id="pi5" onclick="goTo(5)"><div class="pi-dot">6</div><div class="pi-lbl">Alerji &<br>Takviye</div></div>
+  <div class="pi" id="pi6" onclick="goTo(6)"><div class="pi-dot">7</div><div class="pi-lbl">Yeme &<br>Beden</div></div>
 </div>
 
 <form id="mf" name="beslenme-formu" method="POST" data-netlify="true">
@@ -172,7 +173,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 1: KİŞİSEL ── -->
 <div class="fsec active" id="s0">
-  <span class="fs-tag">Bölüm 1 / 6</span>
+  <span class="fs-tag">Bölüm 1 / 7</span>
   <h2 class="fs-title">Kişisel <em>Bilgiler</em></h2>
   <p class="fs-desc">Seninle tanışalım. Sadece ad ve e-posta zorunlu, diğerleri opsiyonel.</p>
 
@@ -207,7 +208,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 2: SAĞLIK ── -->
 <div class="fsec" id="s1">
-  <span class="fs-tag">Bölüm 2 / 6</span>
+  <span class="fs-tag">Bölüm 2 / 7</span>
   <h2 class="fs-title">Sağlık <em>Durumu</em></h2>
   <p class="fs-desc">Programını doğru kişiselleştirebilmem için sağlık geçmişin çok önemli. Sana uymayan sorular varsa boş bırakabilirsin.</p>
 
@@ -261,7 +262,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 3: YAŞAM DÜZENİ ── -->
 <div class="fsec" id="s2">
-  <span class="fs-tag">Bölüm 3 / 6</span>
+  <span class="fs-tag">Bölüm 3 / 7</span>
   <h2 class="fs-title">Yaşam <em>Düzeni</em></h2>
   <p class="fs-desc">Günlük ritmin programının temelidir.</p>
 
@@ -295,7 +296,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 4: KAHVALTI ── -->
 <div class="fsec" id="s3">
-  <span class="fs-tag">Bölüm 4 / 6</span>
+  <span class="fs-tag">Bölüm 4 / 7</span>
   <h2 class="fs-title">Kahvaltı <em>Alışkanlıkları</em></h2>
   <p class="fs-desc">Sabah nasıl beslendiğini anlamak programın başlangıç noktası. Kahvaltı yapmıyorsanız atlayın.</p>
 
@@ -351,12 +352,12 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <div class="fg c2">
       <div class="field"><label>Peynir çeşitleri</label>
       <div class="cg" id="peynir-cg">
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Beyaz"><div class="ind"></div>Beyaz</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Eski Kaşar"><div class="ind"></div>Eski Kaşar</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Taze Kaşar"><div class="ind"></div>Taze Kaşar</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Tulum"><div class="ind"></div>Tulum</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Dil"><div class="ind"></div>Dil</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="peynir" value="Yok"><div class="ind"></div>Tüketmiyorum</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Beyaz"><div class="ind"></div>Beyaz</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Eski Kaşar"><div class="ind"></div>Eski Kaşar</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Taze Kaşar"><div class="ind"></div>Taze Kaşar</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Tulum"><div class="ind"></div>Tulum</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Dil"><div class="ind"></div>Dil</label>
+        <label class="co"><input type="checkbox" name="peynir" value="Yok"><div class="ind"></div>Tüketmiyorum</label>
       </div></div>
       <div class="field"><label>Yumurta</label>
       <div class="rg" id="yumurta-rg">
@@ -369,12 +370,12 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <div class="fg c2">
       <div class="field"><label>Bal / Reçel / Nutella / Fındık ezmesi</label>
       <div class="cg">
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Yok"><div class="ind"></div>Tüketmiyorum</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Bal"><div class="ind"></div>Bal</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Reçel"><div class="ind"></div>Reçel</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Nutella"><div class="ind"></div>Nutella</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Fındık Ezmesi"><div class="ind"></div>Fındık Ezmesi</label>
-        <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="tatli" value="Fıstık Ezmesi"><div class="ind"></div>Fıstık Ezmesi</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Yok"><div class="ind"></div>Tüketmiyorum</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Bal"><div class="ind"></div>Bal</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Reçel"><div class="ind"></div>Reçel</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Nutella"><div class="ind"></div>Nutella</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Fındık Ezmesi"><div class="ind"></div>Fındık Ezmesi</label>
+        <label class="co"><input type="checkbox" name="tatli" value="Fıstık Ezmesi"><div class="ind"></div>Fıstık Ezmesi</label>
       </div></div>
       <div class="field"><label>Zeytin / Zeytin ezmesi</label>
       <div class="rg">
@@ -418,7 +419,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 5: ÖĞLE & AKŞAM ── -->
 <div class="fsec" id="s4">
-  <span class="fs-tag">Bölüm 5 / 6</span>
+  <span class="fs-tag">Bölüm 5 / 7</span>
   <h2 class="fs-title">Öğle & <em>Akşam</em></h2>
   <p class="fs-desc">Ana öğün alışkanlıkların. Hafta içi ve hafta sonu farklıysa her ikisini de belirt.</p>
 
@@ -461,11 +462,11 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     </div></div>
     <div class="field"><label>Öğle protein kaynakları</label>
     <div class="cg">
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="ogle_protein" value="Et"><div class="ind"></div>Et</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="ogle_protein" value="Tavuk"><div class="ind"></div>Tavuk</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="ogle_protein" value="Balık"><div class="ind"></div>Balık</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="ogle_protein" value="Baklagiller"><div class="ind"></div>Baklagiller</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="ogle_protein" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
+      <label class="co"><input type="checkbox" name="ogle_protein" value="Et"><div class="ind"></div>Et</label>
+      <label class="co"><input type="checkbox" name="ogle_protein" value="Tavuk"><div class="ind"></div>Tavuk</label>
+      <label class="co"><input type="checkbox" name="ogle_protein" value="Balık"><div class="ind"></div>Balık</label>
+      <label class="co"><input type="checkbox" name="ogle_protein" value="Baklagiller"><div class="ind"></div>Baklagiller</label>
+      <label class="co"><input type="checkbox" name="ogle_protein" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
     </div></div>
   </div>
   <div class="fg c2">
@@ -504,11 +505,11 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     </div></div>
     <div class="field"><label>Akşam protein kaynakları</label>
     <div class="cg">
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="aksam_protein" value="Et"><div class="ind"></div>Et</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="aksam_protein" value="Tavuk"><div class="ind"></div>Tavuk</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="aksam_protein" value="Balık"><div class="ind"></div>Balık</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="aksam_protein" value="Baklagiller"><div class="ind"></div>Baklagiller</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="aksam_protein" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
+      <label class="co"><input type="checkbox" name="aksam_protein" value="Et"><div class="ind"></div>Et</label>
+      <label class="co"><input type="checkbox" name="aksam_protein" value="Tavuk"><div class="ind"></div>Tavuk</label>
+      <label class="co"><input type="checkbox" name="aksam_protein" value="Balık"><div class="ind"></div>Balık</label>
+      <label class="co"><input type="checkbox" name="aksam_protein" value="Baklagiller"><div class="ind"></div>Baklagiller</label>
+      <label class="co"><input type="checkbox" name="aksam_protein" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
     </div></div>
   </div>
   <div class="fg c2">
@@ -527,44 +528,206 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <!-- ── BÖLÜM 6: ALERJİ & TAKVİYE ── -->
 <div class="fsec" id="s5">
-  <span class="fs-tag">Bölüm 6 / 6</span>
+  <span class="fs-tag">Bölüm 6 / 7</span>
   <h2 class="fs-title">Alerji & <em>Takviye</em></h2>
   <p class="fs-desc">Son bölüm — bunlar programının güvenli ve etkili olması için kritik.</p>
 
   <div class="fg">
     <div class="field"><label>Alerjik olduğunuz besinler</label>
     <div class="cg">
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Yok"><div class="ind"></div>Alerji yok</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Gluten"><div class="ind"></div>Gluten</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Kabuklu Deniz"><div class="ind"></div>Kabuklu Deniz</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Yerfıstığı/Fındık"><div class="ind"></div>Yerfıstığı / Fındık</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Laktoz"><div class="ind"></div>Laktoz</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Çilek/Ananas/Avokado"><div class="ind"></div>Çilek / Ananas / Avokado</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Balık"><div class="ind"></div>Balık</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Soya"><div class="ind"></div>Soya</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Yumurta"><div class="ind"></div>Yumurta</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="alerji" value="Susam"><div class="ind"></div>Susam</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Yok"><div class="ind"></div>Alerji yok</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Gluten"><div class="ind"></div>Gluten</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Kabuklu Deniz"><div class="ind"></div>Kabuklu Deniz</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Yerfıstığı/Fındık"><div class="ind"></div>Yerfıstığı / Fındık</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Laktoz"><div class="ind"></div>Laktoz</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Çilek/Ananas/Avokado"><div class="ind"></div>Çilek / Ananas / Avokado</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Balık"><div class="ind"></div>Balık</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Soya"><div class="ind"></div>Soya</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Yumurta"><div class="ind"></div>Yumurta</label>
+      <label class="co"><input type="checkbox" name="alerji" value="Susam"><div class="ind"></div>Susam</label>
     </div></div>
   </div>
   <div class="fg">
     <div class="field"><label>Gıda takviyesi kullanıyor musunuz?</label>
     <div class="cg">
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="L-Carnitin"><div class="ind"></div>L-Carnitin</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Protein Tozu"><div class="ind"></div>Protein Tozu</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="CLA"><div class="ind"></div>CLA</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="BCAA"><div class="ind"></div>BCAA</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Kreatin"><div class="ind"></div>Kreatin</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Multivitamin"><div class="ind"></div>Multivitamin</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Omega 3"><div class="ind"></div>Omega 3</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Glutamin"><div class="ind"></div>Glutamin</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Arginin"><div class="ind"></div>Arginin</label>
-      <label class="co" onclick="handleCheck(this)"><input type="checkbox" name="takviye" value="Ginseng"><div class="ind"></div>Ginseng</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="co"><input type="checkbox" name="takviye" value="L-Carnitin"><div class="ind"></div>L-Carnitin</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Protein Tozu"><div class="ind"></div>Protein Tozu</label>
+      <label class="co"><input type="checkbox" name="takviye" value="CLA"><div class="ind"></div>CLA</label>
+      <label class="co"><input type="checkbox" name="takviye" value="BCAA"><div class="ind"></div>BCAA</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Kreatin"><div class="ind"></div>Kreatin</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Multivitamin"><div class="ind"></div>Multivitamin</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Omega 3"><div class="ind"></div>Omega 3</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Glutamin"><div class="ind"></div>Glutamin</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Arginin"><div class="ind"></div>Arginin</label>
+      <label class="co"><input type="checkbox" name="takviye" value="Ginseng"><div class="ind"></div>Ginseng</label>
     </div></div>
   </div>
   <div class="fg">
     <div class="field"><label>Eklemek istediğin başka bilgiler</label>
     <textarea name="ekstra" placeholder="Aklında kalan her şeyi buraya yazabilirsin. Hiç bir şey yoksa boş bırak."></textarea></div>
+  </div>
+
+</div>
+
+<!-- ── BÖLÜM 7: YEME DAVRANIŞLARI & BEDEN ALGISI ── -->
+<div class="fsec" id="s6">
+  <span class="fs-tag">Bölüm 7 / 7</span>
+  <h2 class="fs-title">Yeme & <em>Beden Algısı</em></h2>
+  <p class="fs-desc">Bu bölüm sana daha iyi yardımcı olabilmem için önemli. Yargılamak için değil, doğru programı oluşturmak için soruyorum. İstersen boş bırakabilirsin.</p>
+
+  <div class="sub-head">🍽 <em>Beslenme</em> Davranışları</div>
+
+  <div class="fg">
+    <div class="field">
+      <label>Son 3 ayda aşağıdakilerden herhangi birini yaşadınız mı?</label>
+      <div class="cg">
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Kontrolümü kaybederek çok fazla yedim"><div class="ind"></div>Kontrolümü kaybederek çok fazla yedim</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Yedikten sonra suçluluk / utanç hissettim"><div class="ind"></div>Yedikten sonra suçluluk veya utanç hissettim</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Öğün atladım veya yemeyi tamamen kestim"><div class="ind"></div>Öğün atladım veya yemeyi tamamen kestim</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Gece yeme atakları yaşadım"><div class="ind"></div>Gece yeme atakları yaşadım</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Yediklerimi kalori sayarak takip ediyorum"><div class="ind"></div>Yediklerimi kalori sayarak takip ediyorum</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Bazı besinleri tamamen yasakladım"><div class="ind"></div>Bazı besinleri kendime tamamen yasakladım</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Duygusal yeme (stres, üzüntü, sıkıntı)"><div class="ind"></div>Stres veya üzüntü gelince yeme ihtiyacı duyuyorum</label>
+        <label class="co"><input type="checkbox" name="yeme_davraniş" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
+      </div>
+    </div>
+  </div>
+
+  <!-- KOŞULLU: Detaylı yeme davranışları -->
+  <div id="cond-detayli-yeme" class="cond" style="margin-top:4px;">
+    <div style="background:rgba(61,90,71,0.06);border-left:3px solid #3D5A47;padding:14px 18px;margin:16px 0;font-size:12px;color:#4E7260;">
+      Belirttiğin bazı durumları daha iyi anlayabilmek için birkaç soru daha sormak istiyorum.
+    </div>
+    <div class="fg">
+      <div class="field">
+        <label>Tıkınırcasına yeme ne sıklıkta oluyor?</label>
+        <div class="rg" id="tikinma-rg">
+          <label class="ro" onclick="handleRadio(this,'tikinma','Hiç yaşamıyorum')"><input type="radio" name="tikinma" value="Hiç yaşamıyorum"><div class="ind"></div>Hiç yaşamıyorum</label>
+          <label class="ro" onclick="handleRadio(this,'tikinma','Ayda 1-2 kez')"><input type="radio" name="tikinma" value="Ayda 1-2 kez"><div class="ind"></div>Ayda 1-2 kez</label>
+          <label class="ro" onclick="handleRadio(this,'tikinma','Haftada 1-2 kez')"><input type="radio" name="tikinma" value="Haftada 1-2 kez"><div class="ind"></div>Haftada 1-2 kez</label>
+          <label class="ro" onclick="handleRadio(this,'tikinma','Haftada 3+ kez')"><input type="radio" name="tikinma" value="Haftada 3+ kez"><div class="ind"></div>Haftada 3+ kez</label>
+        </div>
+      </div>
+    </div>
+    <div class="fg c2">
+      <div class="field">
+        <label>Laksatif veya diüretik kullanıyor musunuz?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'laksatif','Hayır')"><input type="radio" name="laksatif" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,'laksatif','Bazen')"><input type="radio" name="laksatif" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,'laksatif','Sık sık')"><input type="radio" name="laksatif" value="Sık sık"><div class="ind"></div>Sık sık</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Yedikten sonra kusma yaşıyor musunuz?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'kusma','Hayır')"><input type="radio" name="kusma" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,'kusma','Bazen')"><input type="radio" name="kusma" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,'kusma','Sık sık')"><input type="radio" name="kusma" value="Sık sık"><div class="ind"></div>Sık sık</label>
+        </div>
+      </div>
+    </div>
+    <div class="fg c2">
+      <div class="field">
+        <label>Kendinizi cezalandırmak için aşırı egzersiz yapıyor musunuz?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Hayır')"><input type="radio" name="asiri_egzersiz" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Bazen')"><input type="radio" name="asiri_egzersiz" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Sık sık')"><input type="radio" name="asiri_egzersiz" value="Sık sık"><div class="ind"></div>Sık sık</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Gece yeme atakları ne sıklıkta?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'gece_yeme','Hiç')"><input type="radio" name="gece_yeme" value="Hiç"><div class="ind"></div>Hiç</label>
+          <label class="ro" onclick="handleRadio(this,'gece_yeme','Bazen')"><input type="radio" name="gece_yeme" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,'gece_yeme','Sık sık')"><input type="radio" name="gece_yeme" value="Sık sık"><div class="ind"></div>Sık sık</label>
+        </div>
+      </div>
+    </div>
+    <div class="fg">
+      <div class="field">
+        <label>Duygusal yeme tetikleyicileriniz neler?</label>
+        <div class="cg">
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Stres"><div class="ind"></div>Stres</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Üzüntü / depresyon"><div class="ind"></div>Üzüntü / depresyon</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Yalnızlık"><div class="ind"></div>Yalnızlık</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Sıkıntı / can sıkıntısı"><div class="ind"></div>Sıkıntı / can sıkıntısı</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Yorgunluk"><div class="ind"></div>Yorgunluk</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Sosyal ortamlar"><div class="ind"></div>Sosyal ortamlar</label>
+          <label class="co"><input type="checkbox" name="duygusal_tetik" value="Yok"><div class="ind"></div>Yok</label>
+        </div>
+      </div>
+    </div>
+    <div class="fg c2">
+      <div class="field">
+        <label>Tartılma sıklığınız?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'tartilma','Hiç tartılmıyorum')"><input type="radio" name="tartilma" value="Hiç tartılmıyorum"><div class="ind"></div>Hiç</label>
+          <label class="ro" onclick="handleRadio(this,'tartilma','Haftada 1 kez')"><input type="radio" name="tartilma" value="Haftada 1 kez"><div class="ind"></div>Haftada 1</label>
+          <label class="ro" onclick="handleRadio(this,'tartilma','Günde 1 kez')"><input type="radio" name="tartilma" value="Günde 1 kez"><div class="ind"></div>Günde 1</label>
+          <label class="ro" onclick="handleRadio(this,'tartilma','Günde birden fazla')"><input type="radio" name="tartilma" value="Günde birden fazla"><div class="ind"></div>Günde 2+</label>
+        </div>
+      </div>
+      <div class="field">
+        <label>Aynaya bakma sıklığınız?</label>
+        <div class="rg">
+          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Normal')"><input type="radio" name="aynaya_bakma" value="Normal"><div class="ind"></div>Normal</label>
+          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Sık kontrol ediyorum')"><input type="radio" name="aynaya_bakma" value="Sık kontrol ediyorum"><div class="ind"></div>Sık kontrol ediyorum</label>
+          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Aynadan kaçınıyorum')"><input type="radio" name="aynaya_bakma" value="Aynadan kaçınıyorum"><div class="ind"></div>Aynadan kaçınıyorum</label>
+        </div>
+      </div>
+    </div>
+  </div><!-- /cond-detayli-yeme -->
+
+  <div class="fg" style="margin-top:8px;">
+    <div class="field">
+      <label>Öğün düzeniniz nasıl?</label>
+      <div class="rg" id="ogun-sayisi-rg">
+        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','1-2 öğün')"><input type="radio" name="ogun_sayisi" value="1-2 öğün"><div class="ind"></div>1-2 öğün</label>
+        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','3 öğün')"><input type="radio" name="ogun_sayisi" value="3 öğün"><div class="ind"></div>3 öğün</label>
+        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','3 öğün + ara öğünler')"><input type="radio" name="ogun_sayisi" value="3 öğün + ara öğünler"><div class="ind"></div>3 öğün + ara öğünler</label>
+        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','Düzensiz')"><input type="radio" name="ogun_sayisi" value="Düzensiz"><div class="ind"></div>Düzensiz</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="sub-head" style="margin-top:36px;">🪞 <em>Beden Algısı</em></div>
+
+  <div class="fg">
+    <div class="field">
+      <label>Bedeninizle ilgili aşağıdakilerden hangilerini hissediyorsunuz?</label>
+      <div class="cg">
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Kilo almaktan çok korkuyorum"><div class="ind"></div>Kilo almaktan çok korkuyorum</label>
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Beden görünümümden memnun değilim"><div class="ind"></div>Beden görünümümden memnun değilim</label>
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Sık sık aynaya bakıp bedenimi kontrol ediyorum"><div class="ind"></div>Sık sık aynaya bakıp bedenimi kontrol ediyorum</label>
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Sık tartılıyorum (günde birden fazla)"><div class="ind"></div>Sık tartılıyorum (günde birden fazla)</label>
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Yedikten sonra kendimi cezalandırıyorum (egzersiz vb.)"><div class="ind"></div>Yedikten sonra kendimi fazla egzersizle cezalandırıyorum</label>
+        <label class="co"><input type="checkbox" name="beden_algisi" value="Hiçbiri"><div class="ind"></div>Hiçbiri</label>
+      </div>
+    </div>
+  </div>
+
+  <div class="fg">
+    <div class="field">
+      <label>Eklemek istediğin bir şey var mı? (opsiyonel)</label>
+      <textarea name="yeme_beden_not" placeholder="Yeme veya beden algınla ilgili paylaşmak istediğin başka bir şey varsa buraya yazabilirsin..."></textarea>
+    </div>
+  </div>
+
+  <input type="hidden" name="risk_skoru" id="risk-skoru-input" value="">
+
+  <div style="margin-top:32px;background:rgba(196,162,74,0.06);border:1px solid rgba(196,162,74,0.2);padding:24px;">
+    <p style="font-size:13px;font-weight:300;color:#6B5B3E;line-height:1.85;margin-bottom:16px;">
+      <strong style="color:#1A1410;font-weight:500;">Kişisel Verilerin Korunması (KVKK)</strong><br>
+      Bu form aracılığıyla paylaştığınız kişisel veriler, 6698 sayılı KVKK kapsamında Dyt. Ayşenur Saral Gül tarafından yalnızca size özel beslenme programı hazırlanması amacıyla işlenecektir. Verileriniz üçüncü şahıslarla paylaşılmayacak ve ticari amaçla kullanılmayacaktır. Verilerinizin silinmesini veya düzeltilmesini talep etme hakkına sahipsiniz.
+    </p>
+    <label style="display:flex;align-items:flex-start;gap:12px;cursor:pointer;padding:14px 16px;background:#F0E9DC;border:1px solid #E5D9C5;transition:border-color 0.2s;" onclick="toggleKvkk()">
+      <div id="kvkk-box" style="width:18px;height:18px;min-width:18px;border:2px solid #C4A24A;border-radius:2px;margin-top:2px;display:flex;align-items:center;justify-content:center;font-size:11px;color:#fff;transition:all 0.2s;"></div>
+      <span style="font-size:13px;font-weight:300;color:#4A3C2C;line-height:1.6;">Kişisel verilerimin yukarıda belirtilen amaçlar doğrultusunda işlenmesini <strong style="color:#1A1410;font-weight:500;">okudum, anladım ve onaylıyorum.</strong></span>
+      <input type="checkbox" name="kvkk_onay" id="kvkk-input" value="Onaylandı" style="display:none;">
+    </label>
   </div>
 </div>
 
@@ -572,7 +735,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 
 <div class="fnav" id="fnav">
   <button class="btn btn-p" onclick="prev()" id="btnP" disabled>← Önceki</button>
-  <span class="sc-count">Adım <strong id="scNum">1</strong> / 6</span>
+  <span class="sc-count">Adım <strong id="scNum">1</strong> / <span id="totalNum">7</span></span>
   <div style="display:flex;gap:10px;">
     <button class="btn btn-n" onclick="next()" id="btnN">Sonraki →</button>
     <button class="btn btn-s" onclick="submitForm()" id="btnS" style="display:none;">Gönder ✓</button>
@@ -595,7 +758,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 </footer>
 
 <script>
-let cur = 0, total = 6;
+let cur = 0, total = 7;
 let calismaYeri = '';
 
 function handleRadio(el, name, val){
@@ -614,6 +777,42 @@ function handleRadio(el, name, val){
 function handleCheck(el){
   el.classList.toggle('sel');
   el.querySelector('input').checked = el.classList.contains('sel');
+}
+
+document.addEventListener('DOMContentLoaded', function(){
+  document.querySelectorAll('.co').forEach(function(el){
+    el.addEventListener('click', function(e){
+      e.preventDefault();
+      e.stopPropagation();
+      this.classList.toggle('sel');
+      this.querySelector('input').checked = this.classList.contains('sel');
+      // Recheck scoring whenever any checkbox changes
+      checkDetayliYeme();
+    });
+  });
+});
+
+function checkDetayliYeme(){
+  // Yeme davranışı puanı (Hiçbiri seçiliyse 0)
+  const yemeChecked = Array.from(document.querySelectorAll('input[name="yeme_davraniş"]:checked')).map(i => i.value);
+  const yemeHicbiri = yemeChecked.includes('Hiçbiri');
+  const yemePuan = yemeHicbiri ? 0 : yemeChecked.length;
+
+  // Beden algısı puanı (Hiçbiri seçiliyse 0)
+  const bedenChecked = Array.from(document.querySelectorAll('input[name="beden_algisi"]:checked')).map(i => i.value);
+  const bedenHicbiri = bedenChecked.includes('Hiçbiri');
+  const bedenPuan = bedenHicbiri ? 0 : bedenChecked.length;
+
+  // Toplam 3+ puan → detaylı sorular açılır
+  const toplamPuan = yemePuan + bedenPuan;
+  toggleCond('cond-detayli-yeme', toplamPuan >= 3);
+
+  // Risk skoru güncelle
+  var riskEl = document.getElementById('risk-skoru-input');
+  if(riskEl){
+    var seviye = toplamPuan === 0 ? 'Düşük' : toplamPuan <= 2 ? 'Orta' : toplamPuan <= 4 ? 'Orta-Yüksek' : 'YÜKSEK - Detaylı görüşme önerilir';
+    riskEl.value = 'Risk Skoru: ' + toplamPuan + ' | Seviye: ' + seviye + ' | Yeme: ' + (yemeChecked.filter(v=>v!=='Hiçbiri').join(', ')||'Yok') + ' | Beden: ' + (bedenChecked.filter(v=>v!=='Hiçbiri').join(', ')||'Yok');
+  }
 }
 
 function toggleCond(id, show){
@@ -640,6 +839,8 @@ function updateUI(){
   document.getElementById('btnN').style.display = cur < total-1 ? 'inline-flex' : 'none';
   document.getElementById('btnS').style.display = cur === total-1 ? 'inline-flex' : 'none';
   document.getElementById('scNum').textContent = cur + 1;
+  var tn = document.getElementById('totalNum');
+  if(tn) tn.textContent = total;
   for(let i=0; i<total; i++){
     const p = document.getElementById('pi'+i);
     p.classList.remove('active','done');
@@ -660,6 +861,18 @@ function next(){ if(cur < total-1) goTo(cur+1); }
 function prev(){ if(cur > 0) goTo(cur-1); }
 
 function submitForm(){
+  // Calculate risk score
+const riskItems = [
+  ...Array.from(document.querySelectorAll('input[name="yeme_davraniş"]:checked')).map(i => i.value),
+  ...Array.from(document.querySelectorAll('input[name="beden_algisi"]:checked')).map(i => i.value)
+].filter(v => v !== 'Hiçbiri');
+const highRiskFlags = ['Kontrolümü kaybederek', 'suçluluk', 'cezalandırıyorum', 'Kilo almaktan çok korkuyorum', 'Sık tartılıyorum'];
+const highRisk = riskItems.some(v => highRiskFlags.some(f => v.includes(f)));
+const riskLevel = riskItems.length === 0 ? 'Düşük' : riskItems.length <= 2 ? 'Orta' : highRisk ? 'YÜKSEK - Detaylı görüşme önerilir' : 'Orta-Yüksek';
+const riskInput = document.getElementById('risk-skoru-input');
+if(riskInput) riskInput.value = 'Risk Seviyesi: ' + riskLevel + ' | İşaretlenen: ' + (riskItems.join(', ') || 'Yok');
+const kvkk = document.getElementById('kvkk-input');
+  if(kvkk && !kvkk.checked){ alert('Devam etmek için KVKK onayını vermeniz gerekmektedir.'); goTo(5); return; }
   const name = document.querySelector('[name="ad_soyad"]').value;
   const email = document.querySelector('[name="email"]').value;
   if(!name || !email){
@@ -673,6 +886,21 @@ function submitForm(){
   window.scrollTo({top:0,behavior:'smooth'});
   const data = new FormData(document.getElementById('mf'));
   fetch('/', {method:'POST', body: data}).catch(()=>{});
+}
+
+function toggleKvkk(){
+  const box = document.getElementById('kvkk-box');
+  const input = document.getElementById('kvkk-input');
+  input.checked = !input.checked;
+  if(input.checked){
+    box.style.background = '#C4A24A';
+    box.style.borderColor = '#C4A24A';
+    box.textContent = '✓';
+  } else {
+    box.style.background = '';
+    box.style.borderColor = '#C4A24A';
+    box.textContent = '';
+  }
 }
 </script>
 </body>
