@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="tr">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="tr"><head><meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Danışan Bilgi Formu — Dyt. Ayşenur Saral Gül</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;1,400\&family=DM+Sans:wght@300;400;500\&display=swap" rel="stylesheet">
 <style>
 :root{
   --ink:#1A1410;--ink-mid:#4A3C2C;--ink-soft:#8A7660;
@@ -163,12 +160,12 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="pi" id="pi1" onclick="goTo(1)"><div class="pi-dot">2</div><div class="pi-lbl">Sağlık<br>Durumu</div></div>
   <div class="pi" id="pi2" onclick="goTo(2)"><div class="pi-dot">3</div><div class="pi-lbl">Yaşam<br>Düzeni</div></div>
   <div class="pi" id="pi3" onclick="goTo(3)"><div class="pi-dot">4</div><div class="pi-lbl">Kahvaltı<br>Alışk.</div></div>
-  <div class="pi" id="pi4" onclick="goTo(4)"><div class="pi-dot">5</div><div class="pi-lbl">Öğle &<br>Akşam</div></div>
-  <div class="pi" id="pi5" onclick="goTo(5)"><div class="pi-dot">6</div><div class="pi-lbl">Alerji &<br>Takviye</div></div>
-  <div class="pi" id="pi6" onclick="goTo(6)"><div class="pi-dot">7</div><div class="pi-lbl">Yeme &<br>Beden</div></div>
+  <div class="pi" id="pi4" onclick="goTo(4)"><div class="pi-dot">5</div><div class="pi-lbl">Öğle &amp;<br>Akşam</div></div>
+  <div class="pi" id="pi5" onclick="goTo(5)"><div class="pi-dot">6</div><div class="pi-lbl">Alerji &amp;<br>Takviye</div></div>
+  <div class="pi" id="pi6" onclick="goTo(6)"><div class="pi-dot">7</div><div class="pi-lbl">Yeme &amp;<br>Beden</div></div>
 </div>
 
-<form id="mf" name="beslenme-formu" method="POST" data-netlify="true">
+<form id="mf" method="POST" name="beslenme-formu">
 <input type="hidden" name="form-name" value="beslenme-formu">
 
 <!-- ── BÖLÜM 1: KİŞİSEL ── -->
@@ -178,8 +175,8 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <p class="fs-desc">Seninle tanışalım. Sadece ad ve e-posta zorunlu, diğerleri opsiyonel.</p>
 
   <div class="fg c2">
-    <div class="field"><label>Ad Soyad <span class="req">*</span></label><input type="text" name="ad_soyad" placeholder="Adın ve soyadın" required></div>
-    <div class="field"><label>E-Mail <span class="req">*</span></label><input type="email" name="email" placeholder="ornek@email.com" required></div>
+    <div class="field"><label>Ad Soyad</label><input type="text" name="ad_soyad" placeholder="Adın ve soyadın"></div>
+    <div class="field"><label>E-Mail</label><input type="email" name="email" placeholder="ornek@email.com"></div>
   </div>
   <div class="fg c2">
     <div class="field"><label>Telefon</label><input type="tel" name="telefon" placeholder="05XX XXX XX XX"></div>
@@ -190,18 +187,18 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <div class="field"><label>Hedef</label><input type="text" name="hedef_kisa" placeholder="Kısa hedefin (örn: 10 kg vermek)"></div>
   </div>
   <div class="fg">
-    <div class="field"><label>Hedefler & Beklentiler <span class="req">*</span></label>
-    <textarea name="hedefler" placeholder="Ne kadar kilo vermek istiyorsun? Ne bekliyorsun? Hangi sıkıntılarla karşılaşıyorsun?" required></textarea></div>
+    <div class="field"><label>Hedefler &amp; Beklentiler <span class="req">*</span></label>
+    <textarea name="hedefler" placeholder="Ne kadar kilo vermek istiyorsun? Ne bekliyorsun? Hangi sıkıntılarla karşılaşıyorsun?"></textarea></div>
   </div>
 
   <div class="fg">
     <div class="field"><label>Çalışma Durumunuz <span class="req">*</span></label>
     <div class="rg" id="calisma-rg">
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Evden çalışıyorum')"><input type="radio" name="calisma_yeri" value="Evden çalışıyorum"><div class="ind"></div>🏠 Evden çalışıyorum</label>
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','İşyerinde çalışıyorum')"><input type="radio" name="calisma_yeri" value="İşyerinde çalışıyorum"><div class="ind"></div>🏢 İşyerinde çalışıyorum</label>
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Karma (hem ev hem işyeri)')"><input type="radio" name="calisma_yeri" value="Karma (hem ev hem işyeri)"><div class="ind"></div>🔄 Karma</label>
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Öğrenciyim')"><input type="radio" name="calisma_yeri" value="Öğrenciyim"><div class="ind"></div>🎓 Öğrenciyim</label>
-      <label class="ro" onclick="handleRadio(this,'calisma_yeri','Çalışmıyorum')"><input type="radio" name="calisma_yeri" value="Çalışmıyorum"><div class="ind"></div>🏡 Çalışmıyorum</label>
+      <label class="ro" onclick="handleRadio(this,&#39;calisma_yeri&#39;,&#39;Evden çalışıyorum&#39;)"><input type="radio" name="calisma_yeri" value="Evden çalışıyorum"><div class="ind"></div>🏠 Evden çalışıyorum</label>
+      <label class="ro" onclick="handleRadio(this,&#39;calisma_yeri&#39;,&#39;İşyerinde çalışıyorum&#39;)"><input type="radio" name="calisma_yeri" value="İşyerinde çalışıyorum"><div class="ind"></div>🏢 İşyerinde çalışıyorum</label>
+      <label class="ro" onclick="handleRadio(this,&#39;calisma_yeri&#39;,&#39;Karma (hem ev hem işyeri)&#39;)"><input type="radio" name="calisma_yeri" value="Karma (hem ev hem işyeri)"><div class="ind"></div>🔄 Karma</label>
+      <label class="ro" onclick="handleRadio(this,&#39;calisma_yeri&#39;,&#39;Öğrenciyim&#39;)"><input type="radio" name="calisma_yeri" value="Öğrenciyim"><div class="ind"></div>🎓 Öğrenciyim</label>
+      <label class="ro" onclick="handleRadio(this,&#39;calisma_yeri&#39;,&#39;Çalışmıyorum&#39;)"><input type="radio" name="calisma_yeri" value="Çalışmıyorum"><div class="ind"></div>🏡 Çalışmıyorum</label>
     </div>
     <span class="field-note">Bu seçim bazı soruları otomatik gösterecek/gizleyecek</span>
     </div>
@@ -336,38 +333,38 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg c2">
     <div class="field"><label>Kabızlık probleminiz var mı?</label>
     <div class="rg" id="kabizlik-rg">
-      <label class="ro" onclick="handleRadio(this,'kabizlik','Evet')"><input type="radio" name="kabizlik" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'kabizlik','Hayır')"><input type="radio" name="kabizlik" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'kabizlik','Bazen')"><input type="radio" name="kabizlik" value="Bazen"><div class="ind"></div>Bazen</label>
+      <label class="ro" onclick="handleRadio(this,&#39;kabizlik&#39;,&#39;Evet&#39;)"><input type="radio" name="kabizlik" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;kabizlik&#39;,&#39;Hayır&#39;)"><input type="radio" name="kabizlik" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;kabizlik&#39;,&#39;Bazen&#39;)"><input type="radio" name="kabizlik" value="Bazen"><div class="ind"></div>Bazen</label>
     </div></div>
     <div class="field"><label>İştahlı mısınız?</label>
     <div class="rg" id="istahlı-rg">
-      <label class="ro" onclick="handleRadio(this,'istahli','Evet, çok iştahlıyım')"><input type="radio" name="istahli" value="Evet, çok iştahlıyım"><div class="ind"></div>Evet, çok</label>
-      <label class="ro" onclick="handleRadio(this,'istahli','Normal')"><input type="radio" name="istahli" value="Normal"><div class="ind"></div>Normal</label>
-      <label class="ro" onclick="handleRadio(this,'istahli','Hayır, iştahsızım')"><input type="radio" name="istahli" value="Hayır, iştahsızım"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;istahli&#39;,&#39;Evet, çok iştahlıyım&#39;)"><input type="radio" name="istahli" value="Evet, çok iştahlıyım"><div class="ind"></div>Evet, çok</label>
+      <label class="ro" onclick="handleRadio(this,&#39;istahli&#39;,&#39;Normal&#39;)"><input type="radio" name="istahli" value="Normal"><div class="ind"></div>Normal</label>
+      <label class="ro" onclick="handleRadio(this,&#39;istahli&#39;,&#39;Hayır, iştahsızım&#39;)"><input type="radio" name="istahli" value="Hayır, iştahsızım"><div class="ind"></div>Hayır</label>
     </div></div>
   </div>
   <div class="fg c2">
     <div class="field"><label>Yeterli su tüketiyor musunuz?</label>
     <div class="rg" id="su-rg">
-      <label class="ro" onclick="handleRadio(this,'su','Evet')"><input type="radio" name="su" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'su','Hayır')"><input type="radio" name="su" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'su','Bazen')"><input type="radio" name="su" value="Bazen"><div class="ind"></div>Bazen</label>
+      <label class="ro" onclick="handleRadio(this,&#39;su&#39;,&#39;Evet&#39;)"><input type="radio" name="su" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;su&#39;,&#39;Hayır&#39;)"><input type="radio" name="su" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;su&#39;,&#39;Bazen&#39;)"><input type="radio" name="su" value="Bazen"><div class="ind"></div>Bazen</label>
     </div></div>
     <div class="field"><label>Sıvı detokslara uygun musunuz?</label>
     <div class="rg" id="detoks-rg">
-      <label class="ro" onclick="handleRadio(this,'detoks','Evet')"><input type="radio" name="detoks" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'detoks','Hayır')"><input type="radio" name="detoks" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'detoks','Bilmiyorum')"><input type="radio" name="detoks" value="Bilmiyorum"><div class="ind"></div>Bilmiyorum</label>
+      <label class="ro" onclick="handleRadio(this,&#39;detoks&#39;,&#39;Evet&#39;)"><input type="radio" name="detoks" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;detoks&#39;,&#39;Hayır&#39;)"><input type="radio" name="detoks" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;detoks&#39;,&#39;Bilmiyorum&#39;)"><input type="radio" name="detoks" value="Bilmiyorum"><div class="ind"></div>Bilmiyorum</label>
     </div></div>
   </div>
   <div class="fg c2">
     <div class="field">
       <label>Beslenme davranışlarınız için psikolojik destek aldınız mı?</label>
       <div class="rg" id="psiko-rg">
-        <label class="ro" onclick="handleRadio(this,'psiko_destek','Hayır, almadım')"><input type="radio" name="psiko_destek" value="Hayır, almadım"><div class="ind"></div>Hayır</label>
-        <label class="ro" onclick="handleRadio(this,'psiko_destek','Evet, şu an alıyorum')"><input type="radio" name="psiko_destek" value="Evet, şu an alıyorum"><div class="ind"></div>Evet, alıyorum</label>
-        <label class="ro" onclick="handleRadio(this,'psiko_destek','Geçmişte aldım')"><input type="radio" name="psiko_destek" value="Geçmişte aldım"><div class="ind"></div>Geçmişte aldım</label>
+        <label class="ro" onclick="handleRadio(this,&#39;psiko_destek&#39;,&#39;Hayır, almadım&#39;)"><input type="radio" name="psiko_destek" value="Hayır, almadım"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;psiko_destek&#39;,&#39;Evet, şu an alıyorum&#39;)"><input type="radio" name="psiko_destek" value="Evet, şu an alıyorum"><div class="ind"></div>Evet, alıyorum</label>
+        <label class="ro" onclick="handleRadio(this,&#39;psiko_destek&#39;,&#39;Geçmişte aldım&#39;)"><input type="radio" name="psiko_destek" value="Geçmişte aldım"><div class="ind"></div>Geçmişte aldım</label>
       </div>
       <span class="field-note">Psikolog veya psikiyatrist desteği</span>
     </div>
@@ -398,9 +395,9 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg">
     <div class="field"><label>Her gün yürüyüş yapabilir misiniz?</label>
     <div class="rg" id="yuruyus-rg">
-      <label class="ro" onclick="handleRadio(this,'yuruyus','Evet')"><input type="radio" name="yuruyus" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'yuruyus','Hayır')"><input type="radio" name="yuruyus" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'yuruyus','Bazen / hava durumuna göre')"><input type="radio" name="yuruyus" value="Bazen / hava durumuna göre"><div class="ind"></div>Bazen</label>
+      <label class="ro" onclick="handleRadio(this,&#39;yuruyus&#39;,&#39;Evet&#39;)"><input type="radio" name="yuruyus" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;yuruyus&#39;,&#39;Hayır&#39;)"><input type="radio" name="yuruyus" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;yuruyus&#39;,&#39;Bazen / hava durumuna göre&#39;)"><input type="radio" name="yuruyus" value="Bazen / hava durumuna göre"><div class="ind"></div>Bazen</label>
     </div></div>
   </div>
 
@@ -424,8 +421,8 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg c2">
     <div class="field"><label>Kahvaltı yapıyor musunuz?</label>
     <div class="rg" id="kahvalti-rg">
-      <label class="ro" onclick="handleRadio(this,'kahvalti_yapar','Evet');toggleCond('kahvalti-detay',true)"><input type="radio" name="kahvalti_yapar" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'kahvalti_yapar','Hayır');toggleCond('kahvalti-detay',false)"><input type="radio" name="kahvalti_yapar" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;kahvalti_yapar&#39;,&#39;Evet&#39;);toggleCond(&#39;kahvalti-detay&#39;,true)"><input type="radio" name="kahvalti_yapar" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;kahvalti_yapar&#39;,&#39;Hayır&#39;);toggleCond(&#39;kahvalti-detay&#39;,false)"><input type="radio" name="kahvalti_yapar" value="Hayır"><div class="ind"></div>Hayır</label>
     </div></div>
     <div class="field"><label>Kahvaltı Saati</label><input type="text" name="kahvalti_saati" placeholder="Örn: 08:30"></div>
   </div>
@@ -452,22 +449,22 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <div class="fg">
       <div class="field"><label>Ekmek tüketiyor musunuz? (Kahvaltıda)</label>
       <div class="rg" id="ekmek-k-rg">
-        <label class="ro" onclick="handleRadio(this,'ekmek_k','Hiç')"><input type="radio" name="ekmek_k" value="Hiç"><div class="ind"></div>Hiç</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_k','1 dilim')"><input type="radio" name="ekmek_k" value="1 dilim"><div class="ind"></div>1 dilim</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_k','2 dilim')"><input type="radio" name="ekmek_k" value="2 dilim"><div class="ind"></div>2 dilim</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_k','3 dilim')"><input type="radio" name="ekmek_k" value="3 dilim"><div class="ind"></div>3 dilim</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_k','4+ dilim')"><input type="radio" name="ekmek_k" value="4+ dilim"><div class="ind"></div>4+</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_k&#39;,&#39;Hiç&#39;)"><input type="radio" name="ekmek_k" value="Hiç"><div class="ind"></div>Hiç</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_k&#39;,&#39;1 dilim&#39;)"><input type="radio" name="ekmek_k" value="1 dilim"><div class="ind"></div>1 dilim</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_k&#39;,&#39;2 dilim&#39;)"><input type="radio" name="ekmek_k" value="2 dilim"><div class="ind"></div>2 dilim</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_k&#39;,&#39;3 dilim&#39;)"><input type="radio" name="ekmek_k" value="3 dilim"><div class="ind"></div>3 dilim</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_k&#39;,&#39;4+ dilim&#39;)"><input type="radio" name="ekmek_k" value="4+ dilim"><div class="ind"></div>4+</label>
       </div></div>
     </div>
     <div class="fg">
       <div class="field"><label>Hangi ekmek çeşidi?</label>
       <div class="rg" id="ekmek-cesit-rg">
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Beyaz')"><input type="radio" name="ekmek_cesit" value="Beyaz"><div class="ind"></div>Beyaz</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Tam Buğday')"><input type="radio" name="ekmek_cesit" value="Tam Buğday"><div class="ind"></div>Tam Buğday</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Çavdar')"><input type="radio" name="ekmek_cesit" value="Çavdar"><div class="ind"></div>Çavdar</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Kepekli')"><input type="radio" name="ekmek_cesit" value="Kepekli"><div class="ind"></div>Kepekli</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Çok Tahıllı')"><input type="radio" name="ekmek_cesit" value="Çok Tahıllı"><div class="ind"></div>Çok Tahıllı</label>
-        <label class="ro" onclick="handleRadio(this,'ekmek_cesit','Diğer')"><input type="radio" name="ekmek_cesit" value="Diğer"><div class="ind"></div>Diğer</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Beyaz&#39;)"><input type="radio" name="ekmek_cesit" value="Beyaz"><div class="ind"></div>Beyaz</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Tam Buğday&#39;)"><input type="radio" name="ekmek_cesit" value="Tam Buğday"><div class="ind"></div>Tam Buğday</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Çavdar&#39;)"><input type="radio" name="ekmek_cesit" value="Çavdar"><div class="ind"></div>Çavdar</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Kepekli&#39;)"><input type="radio" name="ekmek_cesit" value="Kepekli"><div class="ind"></div>Kepekli</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Çok Tahıllı&#39;)"><input type="radio" name="ekmek_cesit" value="Çok Tahıllı"><div class="ind"></div>Çok Tahıllı</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ekmek_cesit&#39;,&#39;Diğer&#39;)"><input type="radio" name="ekmek_cesit" value="Diğer"><div class="ind"></div>Diğer</label>
       </div></div>
     </div>
     <div class="fg c2">
@@ -482,10 +479,10 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       </div></div>
       <div class="field"><label>Yumurta</label>
       <div class="rg" id="yumurta-rg">
-        <label class="ro" onclick="handleRadio(this,'yumurta','Hayır')"><input type="radio" name="yumurta" value="Hayır"><div class="ind"></div>Hayır</label>
-        <label class="ro" onclick="handleRadio(this,'yumurta','1 adet')"><input type="radio" name="yumurta" value="1 adet"><div class="ind"></div>1</label>
-        <label class="ro" onclick="handleRadio(this,'yumurta','2 adet')"><input type="radio" name="yumurta" value="2 adet"><div class="ind"></div>2</label>
-        <label class="ro" onclick="handleRadio(this,'yumurta','3+ adet')"><input type="radio" name="yumurta" value="3+ adet"><div class="ind"></div>3+</label>
+        <label class="ro" onclick="handleRadio(this,&#39;yumurta&#39;,&#39;Hayır&#39;)"><input type="radio" name="yumurta" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;yumurta&#39;,&#39;1 adet&#39;)"><input type="radio" name="yumurta" value="1 adet"><div class="ind"></div>1</label>
+        <label class="ro" onclick="handleRadio(this,&#39;yumurta&#39;,&#39;2 adet&#39;)"><input type="radio" name="yumurta" value="2 adet"><div class="ind"></div>2</label>
+        <label class="ro" onclick="handleRadio(this,&#39;yumurta&#39;,&#39;3+ adet&#39;)"><input type="radio" name="yumurta" value="3+ adet"><div class="ind"></div>3+</label>
       </div></div>
     </div>
     <div class="fg c2">
@@ -500,34 +497,34 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       </div></div>
       <div class="field"><label>Zeytin / Zeytin ezmesi</label>
       <div class="rg">
-        <label class="ro" onclick="handleRadio(this,'zeytin','Evet')"><input type="radio" name="zeytin" value="Evet"><div class="ind"></div>Evet</label>
-        <label class="ro" onclick="handleRadio(this,'zeytin','Hayır')"><input type="radio" name="zeytin" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;zeytin&#39;,&#39;Evet&#39;)"><input type="radio" name="zeytin" value="Evet"><div class="ind"></div>Evet</label>
+        <label class="ro" onclick="handleRadio(this,&#39;zeytin&#39;,&#39;Hayır&#39;)"><input type="radio" name="zeytin" value="Hayır"><div class="ind"></div>Hayır</label>
       </div></div>
     </div>
     <div class="fg c2">
       <div class="field"><label>Meyve</label>
       <div class="rg">
-        <label class="ro" onclick="handleRadio(this,'meyve_k','Evet')"><input type="radio" name="meyve_k" value="Evet"><div class="ind"></div>Evet</label>
-        <label class="ro" onclick="handleRadio(this,'meyve_k','Hayır')"><input type="radio" name="meyve_k" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;meyve_k&#39;,&#39;Evet&#39;)"><input type="radio" name="meyve_k" value="Evet"><div class="ind"></div>Evet</label>
+        <label class="ro" onclick="handleRadio(this,&#39;meyve_k&#39;,&#39;Hayır&#39;)"><input type="radio" name="meyve_k" value="Hayır"><div class="ind"></div>Hayır</label>
       </div>
       <input type="text" name="sevilen_meyve" placeholder="Sevdiğin meyveler" style="margin-top:8px;"></div>
       <div class="field"><label>Kuruyemiş</label>
       <div class="rg">
-        <label class="ro" onclick="handleRadio(this,'kuruyemis_k','Evet')"><input type="radio" name="kuruyemis_k" value="Evet"><div class="ind"></div>Evet</label>
-        <label class="ro" onclick="handleRadio(this,'kuruyemis_k','Hayır')"><input type="radio" name="kuruyemis_k" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;kuruyemis_k&#39;,&#39;Evet&#39;)"><input type="radio" name="kuruyemis_k" value="Evet"><div class="ind"></div>Evet</label>
+        <label class="ro" onclick="handleRadio(this,&#39;kuruyemis_k&#39;,&#39;Hayır&#39;)"><input type="radio" name="kuruyemis_k" value="Hayır"><div class="ind"></div>Hayır</label>
       </div>
       <input type="text" name="sevilen_kuruyemis" placeholder="Sevdiklerin" style="margin-top:8px;"></div>
     </div>
     <div class="fg c2">
       <div class="field"><label>Süt ve süt ürünleri</label>
       <div class="rg">
-        <label class="ro" onclick="handleRadio(this,'sut','Evet')"><input type="radio" name="sut" value="Evet"><div class="ind"></div>Evet</label>
-        <label class="ro" onclick="handleRadio(this,'sut','Hayır')"><input type="radio" name="sut" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;sut&#39;,&#39;Evet&#39;)"><input type="radio" name="sut" value="Evet"><div class="ind"></div>Evet</label>
+        <label class="ro" onclick="handleRadio(this,&#39;sut&#39;,&#39;Hayır&#39;)"><input type="radio" name="sut" value="Hayır"><div class="ind"></div>Hayır</label>
       </div></div>
       <div class="field"><label>Müsli / Granola / Yulaf ezmesi</label>
       <div class="rg">
-        <label class="ro" onclick="handleRadio(this,'musli','Evet')"><input type="radio" name="musli" value="Evet"><div class="ind"></div>Evet</label>
-        <label class="ro" onclick="handleRadio(this,'musli','Hayır')"><input type="radio" name="musli" value="Hayır"><div class="ind"></div>Hayır</label>
+        <label class="ro" onclick="handleRadio(this,&#39;musli&#39;,&#39;Evet&#39;)"><input type="radio" name="musli" value="Evet"><div class="ind"></div>Evet</label>
+        <label class="ro" onclick="handleRadio(this,&#39;musli&#39;,&#39;Hayır&#39;)"><input type="radio" name="musli" value="Hayır"><div class="ind"></div>Hayır</label>
       </div></div>
     </div>
   </div><!-- /kahvalti-detay -->
@@ -541,7 +538,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 <!-- ── BÖLÜM 5: ÖĞLE & AKŞAM ── -->
 <div class="fsec" id="s4">
   <span class="fs-tag">Bölüm 5 / 7</span>
-  <h2 class="fs-title">Öğle & <em>Akşam</em></h2>
+  <h2 class="fs-title">Öğle &amp; <em>Akşam</em></h2>
   <p class="fs-desc">Ana öğün alışkanlıkların. Hafta içi ve hafta sonu farklıysa her ikisini de belirt.</p>
 
   <div class="sub-head">🍽 <em>Öğle</em> Yemeği</div>
@@ -550,10 +547,10 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <input type="text" name="ogle_saati" placeholder="Hafta içi / hafta sonu (örn: 13:00 / 14:00)"></div>
     <div class="field"><label>Öğle ekmek tüketimi</label>
     <div class="rg" id="ogle-ekmek-rg">
-      <label class="ro" onclick="handleRadio(this,'ogle_ekmek','Hiç')"><input type="radio" name="ogle_ekmek" value="Hiç"><div class="ind"></div>Hiç</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_ekmek','1')"><input type="radio" name="ogle_ekmek" value="1"><div class="ind"></div>1</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_ekmek','2')"><input type="radio" name="ogle_ekmek" value="2"><div class="ind"></div>2</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_ekmek','3+')"><input type="radio" name="ogle_ekmek" value="3+"><div class="ind"></div>3+</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_ekmek&#39;,&#39;Hiç&#39;)"><input type="radio" name="ogle_ekmek" value="Hiç"><div class="ind"></div>Hiç</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_ekmek&#39;,&#39;1&#39;)"><input type="radio" name="ogle_ekmek" value="1"><div class="ind"></div>1</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_ekmek&#39;,&#39;2&#39;)"><input type="radio" name="ogle_ekmek" value="2"><div class="ind"></div>2</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_ekmek&#39;,&#39;3+&#39;)"><input type="radio" name="ogle_ekmek" value="3+"><div class="ind"></div>3+</label>
     </div></div>
   </div>
 
@@ -576,10 +573,10 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg c2">
     <div class="field"><label>Makarna / pilav / bulgur (Öğle)</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'ogle_karb','Hayır')"><input type="radio" name="ogle_karb" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_karb','2 kaşık')"><input type="radio" name="ogle_karb" value="2 kaşık"><div class="ind"></div>2 kaşık</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_karb','4 kaşık')"><input type="radio" name="ogle_karb" value="4 kaşık"><div class="ind"></div>4 kaşık</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_karb','6+ kaşık')"><input type="radio" name="ogle_karb" value="6+ kaşık"><div class="ind"></div>6+</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_karb&#39;,&#39;Hayır&#39;)"><input type="radio" name="ogle_karb" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_karb&#39;,&#39;2 kaşık&#39;)"><input type="radio" name="ogle_karb" value="2 kaşık"><div class="ind"></div>2 kaşık</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_karb&#39;,&#39;4 kaşık&#39;)"><input type="radio" name="ogle_karb" value="4 kaşık"><div class="ind"></div>4 kaşık</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_karb&#39;,&#39;6+ kaşık&#39;)"><input type="radio" name="ogle_karb" value="6+ kaşık"><div class="ind"></div>6+</label>
     </div></div>
     <div class="field"><label>Öğle protein kaynakları</label>
     <div class="cg">
@@ -593,13 +590,13 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg c2">
     <div class="field"><label>Öğle sebze yemeği</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'ogle_sebze','Evet')"><input type="radio" name="ogle_sebze" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_sebze','Hayır')"><input type="radio" name="ogle_sebze" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_sebze&#39;,&#39;Evet&#39;)"><input type="radio" name="ogle_sebze" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_sebze&#39;,&#39;Hayır&#39;)"><input type="radio" name="ogle_sebze" value="Hayır"><div class="ind"></div>Hayır</label>
     </div></div>
     <div class="field"><label>Öğle yoğurt</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'ogle_yogurt','Evet')"><input type="radio" name="ogle_yogurt" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'ogle_yogurt','Hayır')"><input type="radio" name="ogle_yogurt" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_yogurt&#39;,&#39;Evet&#39;)"><input type="radio" name="ogle_yogurt" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;ogle_yogurt&#39;,&#39;Hayır&#39;)"><input type="radio" name="ogle_yogurt" value="Hayır"><div class="ind"></div>Hayır</label>
     </div></div>
   </div>
 
@@ -610,19 +607,19 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <input type="text" name="aksam_saati" placeholder="Hafta içi / hafta sonu (örn: 19:30 / 20:30)"></div>
     <div class="field"><label>Akşam ekmek tüketimi</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'aksam_ekmek','Hiç')"><input type="radio" name="aksam_ekmek" value="Hiç"><div class="ind"></div>Hiç</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_ekmek','1')"><input type="radio" name="aksam_ekmek" value="1"><div class="ind"></div>1</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_ekmek','2')"><input type="radio" name="aksam_ekmek" value="2"><div class="ind"></div>2</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_ekmek','3+')"><input type="radio" name="aksam_ekmek" value="3+"><div class="ind"></div>3+</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_ekmek&#39;,&#39;Hiç&#39;)"><input type="radio" name="aksam_ekmek" value="Hiç"><div class="ind"></div>Hiç</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_ekmek&#39;,&#39;1&#39;)"><input type="radio" name="aksam_ekmek" value="1"><div class="ind"></div>1</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_ekmek&#39;,&#39;2&#39;)"><input type="radio" name="aksam_ekmek" value="2"><div class="ind"></div>2</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_ekmek&#39;,&#39;3+&#39;)"><input type="radio" name="aksam_ekmek" value="3+"><div class="ind"></div>3+</label>
     </div></div>
   </div>
   <div class="fg c2">
     <div class="field"><label>Makarna / pilav / bulgur (Akşam)</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'aksam_karb','Hayır')"><input type="radio" name="aksam_karb" value="Hayır"><div class="ind"></div>Hayır</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_karb','2 kaşık')"><input type="radio" name="aksam_karb" value="2 kaşık"><div class="ind"></div>2 kaşık</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_karb','4 kaşık')"><input type="radio" name="aksam_karb" value="4 kaşık"><div class="ind"></div>4 kaşık</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_karb','6+ kaşık')"><input type="radio" name="aksam_karb" value="6+ kaşık"><div class="ind"></div>6+</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_karb&#39;,&#39;Hayır&#39;)"><input type="radio" name="aksam_karb" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_karb&#39;,&#39;2 kaşık&#39;)"><input type="radio" name="aksam_karb" value="2 kaşık"><div class="ind"></div>2 kaşık</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_karb&#39;,&#39;4 kaşık&#39;)"><input type="radio" name="aksam_karb" value="4 kaşık"><div class="ind"></div>4 kaşık</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_karb&#39;,&#39;6+ kaşık&#39;)"><input type="radio" name="aksam_karb" value="6+ kaşık"><div class="ind"></div>6+</label>
     </div></div>
     <div class="field"><label>Akşam protein kaynakları</label>
     <div class="cg">
@@ -643,13 +640,13 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
   <div class="fg c2">
     <div class="field"><label>Akşam sebze yemeği</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'aksam_sebze','Evet')"><input type="radio" name="aksam_sebze" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_sebze','Hayır')"><input type="radio" name="aksam_sebze" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_sebze&#39;,&#39;Evet&#39;)"><input type="radio" name="aksam_sebze" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_sebze&#39;,&#39;Hayır&#39;)"><input type="radio" name="aksam_sebze" value="Hayır"><div class="ind"></div>Hayır</label>
     </div></div>
     <div class="field"><label>Akşam yoğurt</label>
     <div class="rg">
-      <label class="ro" onclick="handleRadio(this,'aksam_yogurt','Evet')"><input type="radio" name="aksam_yogurt" value="Evet"><div class="ind"></div>Evet</label>
-      <label class="ro" onclick="handleRadio(this,'aksam_yogurt','Hayır')"><input type="radio" name="aksam_yogurt" value="Hayır"><div class="ind"></div>Hayır</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_yogurt&#39;,&#39;Evet&#39;)"><input type="radio" name="aksam_yogurt" value="Evet"><div class="ind"></div>Evet</label>
+      <label class="ro" onclick="handleRadio(this,&#39;aksam_yogurt&#39;,&#39;Hayır&#39;)"><input type="radio" name="aksam_yogurt" value="Hayır"><div class="ind"></div>Hayır</label>
     </div></div>
   </div>
 </div>
@@ -657,7 +654,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 <!-- ── BÖLÜM 6: ALERJİ & TAKVİYE ── -->
 <div class="fsec" id="s5">
   <span class="fs-tag">Bölüm 6 / 7</span>
-  <h2 class="fs-title">Alerji & <em>Takviye</em></h2>
+  <h2 class="fs-title">Alerji &amp; <em>Takviye</em></h2>
   <p class="fs-desc">Son bölüm — bunlar programının güvenli ve etkili olması için kritik.</p>
 
   <div class="fg">
@@ -702,7 +699,7 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
 <!-- ── BÖLÜM 7: YEME DAVRANIŞLARI & BEDEN ALGISI ── -->
 <div class="fsec" id="s6">
   <span class="fs-tag">Bölüm 7 / 7</span>
-  <h2 class="fs-title">Yeme & <em>Beden Algısı</em></h2>
+  <h2 class="fs-title">Yeme &amp; <em>Beden Algısı</em></h2>
   <p class="fs-desc">Bu bölüm sana daha iyi yardımcı olabilmem için önemli. Yargılamak için değil, doğru programı oluşturmak için soruyorum. İstersen boş bırakabilirsin.</p>
 
   <div class="sub-head">🍽 <em>Beslenme</em> Davranışları</div>
@@ -734,10 +731,10 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <div class="field">
         <label>Tıkınırcasına yeme ne sıklıkta oluyor?</label>
         <div class="rg" id="tikinma-rg">
-          <label class="ro" onclick="handleRadio(this,'tikinma','Hiç yaşamıyorum')"><input type="radio" name="tikinma" value="Hiç yaşamıyorum"><div class="ind"></div>Hiç yaşamıyorum</label>
-          <label class="ro" onclick="handleRadio(this,'tikinma','Ayda 1-2 kez')"><input type="radio" name="tikinma" value="Ayda 1-2 kez"><div class="ind"></div>Ayda 1-2 kez</label>
-          <label class="ro" onclick="handleRadio(this,'tikinma','Haftada 1-2 kez')"><input type="radio" name="tikinma" value="Haftada 1-2 kez"><div class="ind"></div>Haftada 1-2 kez</label>
-          <label class="ro" onclick="handleRadio(this,'tikinma','Haftada 3+ kez')"><input type="radio" name="tikinma" value="Haftada 3+ kez"><div class="ind"></div>Haftada 3+ kez</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tikinma&#39;,&#39;Hiç yaşamıyorum&#39;)"><input type="radio" name="tikinma" value="Hiç yaşamıyorum"><div class="ind"></div>Hiç yaşamıyorum</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tikinma&#39;,&#39;Ayda 1-2 kez&#39;)"><input type="radio" name="tikinma" value="Ayda 1-2 kez"><div class="ind"></div>Ayda 1-2 kez</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tikinma&#39;,&#39;Haftada 1-2 kez&#39;)"><input type="radio" name="tikinma" value="Haftada 1-2 kez"><div class="ind"></div>Haftada 1-2 kez</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tikinma&#39;,&#39;Haftada 3+ kez&#39;)"><input type="radio" name="tikinma" value="Haftada 3+ kez"><div class="ind"></div>Haftada 3+ kez</label>
         </div>
       </div>
     </div>
@@ -745,17 +742,17 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <div class="field">
         <label>Laksatif veya diüretik kullanıyor musunuz?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'laksatif','Hayır')"><input type="radio" name="laksatif" value="Hayır"><div class="ind"></div>Hayır</label>
-          <label class="ro" onclick="handleRadio(this,'laksatif','Bazen')"><input type="radio" name="laksatif" value="Bazen"><div class="ind"></div>Bazen</label>
-          <label class="ro" onclick="handleRadio(this,'laksatif','Sık sık')"><input type="radio" name="laksatif" value="Sık sık"><div class="ind"></div>Sık sık</label>
+          <label class="ro" onclick="handleRadio(this,&#39;laksatif&#39;,&#39;Hayır&#39;)"><input type="radio" name="laksatif" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,&#39;laksatif&#39;,&#39;Bazen&#39;)"><input type="radio" name="laksatif" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,&#39;laksatif&#39;,&#39;Sık sık&#39;)"><input type="radio" name="laksatif" value="Sık sık"><div class="ind"></div>Sık sık</label>
         </div>
       </div>
       <div class="field">
         <label>Yedikten sonra kusma yaşıyor musunuz?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'kusma','Hayır')"><input type="radio" name="kusma" value="Hayır"><div class="ind"></div>Hayır</label>
-          <label class="ro" onclick="handleRadio(this,'kusma','Bazen')"><input type="radio" name="kusma" value="Bazen"><div class="ind"></div>Bazen</label>
-          <label class="ro" onclick="handleRadio(this,'kusma','Sık sık')"><input type="radio" name="kusma" value="Sık sık"><div class="ind"></div>Sık sık</label>
+          <label class="ro" onclick="handleRadio(this,&#39;kusma&#39;,&#39;Hayır&#39;)"><input type="radio" name="kusma" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,&#39;kusma&#39;,&#39;Bazen&#39;)"><input type="radio" name="kusma" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,&#39;kusma&#39;,&#39;Sık sık&#39;)"><input type="radio" name="kusma" value="Sık sık"><div class="ind"></div>Sık sık</label>
         </div>
       </div>
     </div>
@@ -763,17 +760,17 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <div class="field">
         <label>Kendinizi cezalandırmak için aşırı egzersiz yapıyor musunuz?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Hayır')"><input type="radio" name="asiri_egzersiz" value="Hayır"><div class="ind"></div>Hayır</label>
-          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Bazen')"><input type="radio" name="asiri_egzersiz" value="Bazen"><div class="ind"></div>Bazen</label>
-          <label class="ro" onclick="handleRadio(this,'asiri_egzersiz','Sık sık')"><input type="radio" name="asiri_egzersiz" value="Sık sık"><div class="ind"></div>Sık sık</label>
+          <label class="ro" onclick="handleRadio(this,&#39;asiri_egzersiz&#39;,&#39;Hayır&#39;)"><input type="radio" name="asiri_egzersiz" value="Hayır"><div class="ind"></div>Hayır</label>
+          <label class="ro" onclick="handleRadio(this,&#39;asiri_egzersiz&#39;,&#39;Bazen&#39;)"><input type="radio" name="asiri_egzersiz" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,&#39;asiri_egzersiz&#39;,&#39;Sık sık&#39;)"><input type="radio" name="asiri_egzersiz" value="Sık sık"><div class="ind"></div>Sık sık</label>
         </div>
       </div>
       <div class="field">
         <label>Gece yeme atakları ne sıklıkta?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'gece_yeme','Hiç')"><input type="radio" name="gece_yeme" value="Hiç"><div class="ind"></div>Hiç</label>
-          <label class="ro" onclick="handleRadio(this,'gece_yeme','Bazen')"><input type="radio" name="gece_yeme" value="Bazen"><div class="ind"></div>Bazen</label>
-          <label class="ro" onclick="handleRadio(this,'gece_yeme','Sık sık')"><input type="radio" name="gece_yeme" value="Sık sık"><div class="ind"></div>Sık sık</label>
+          <label class="ro" onclick="handleRadio(this,&#39;gece_yeme&#39;,&#39;Hiç&#39;)"><input type="radio" name="gece_yeme" value="Hiç"><div class="ind"></div>Hiç</label>
+          <label class="ro" onclick="handleRadio(this,&#39;gece_yeme&#39;,&#39;Bazen&#39;)"><input type="radio" name="gece_yeme" value="Bazen"><div class="ind"></div>Bazen</label>
+          <label class="ro" onclick="handleRadio(this,&#39;gece_yeme&#39;,&#39;Sık sık&#39;)"><input type="radio" name="gece_yeme" value="Sık sık"><div class="ind"></div>Sık sık</label>
         </div>
       </div>
     </div>
@@ -795,18 +792,18 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <div class="field">
         <label>Tartılma sıklığınız?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'tartilma','Hiç tartılmıyorum')"><input type="radio" name="tartilma" value="Hiç tartılmıyorum"><div class="ind"></div>Hiç</label>
-          <label class="ro" onclick="handleRadio(this,'tartilma','Haftada 1 kez')"><input type="radio" name="tartilma" value="Haftada 1 kez"><div class="ind"></div>Haftada 1</label>
-          <label class="ro" onclick="handleRadio(this,'tartilma','Günde 1 kez')"><input type="radio" name="tartilma" value="Günde 1 kez"><div class="ind"></div>Günde 1</label>
-          <label class="ro" onclick="handleRadio(this,'tartilma','Günde birden fazla')"><input type="radio" name="tartilma" value="Günde birden fazla"><div class="ind"></div>Günde 2+</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tartilma&#39;,&#39;Hiç tartılmıyorum&#39;)"><input type="radio" name="tartilma" value="Hiç tartılmıyorum"><div class="ind"></div>Hiç</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tartilma&#39;,&#39;Haftada 1 kez&#39;)"><input type="radio" name="tartilma" value="Haftada 1 kez"><div class="ind"></div>Haftada 1</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tartilma&#39;,&#39;Günde 1 kez&#39;)"><input type="radio" name="tartilma" value="Günde 1 kez"><div class="ind"></div>Günde 1</label>
+          <label class="ro" onclick="handleRadio(this,&#39;tartilma&#39;,&#39;Günde birden fazla&#39;)"><input type="radio" name="tartilma" value="Günde birden fazla"><div class="ind"></div>Günde 2+</label>
         </div>
       </div>
       <div class="field">
         <label>Aynaya bakma sıklığınız?</label>
         <div class="rg">
-          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Normal')"><input type="radio" name="aynaya_bakma" value="Normal"><div class="ind"></div>Normal</label>
-          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Sık kontrol ediyorum')"><input type="radio" name="aynaya_bakma" value="Sık kontrol ediyorum"><div class="ind"></div>Sık kontrol ediyorum</label>
-          <label class="ro" onclick="handleRadio(this,'aynaya_bakma','Aynadan kaçınıyorum')"><input type="radio" name="aynaya_bakma" value="Aynadan kaçınıyorum"><div class="ind"></div>Aynadan kaçınıyorum</label>
+          <label class="ro" onclick="handleRadio(this,&#39;aynaya_bakma&#39;,&#39;Normal&#39;)"><input type="radio" name="aynaya_bakma" value="Normal"><div class="ind"></div>Normal</label>
+          <label class="ro" onclick="handleRadio(this,&#39;aynaya_bakma&#39;,&#39;Sık kontrol ediyorum&#39;)"><input type="radio" name="aynaya_bakma" value="Sık kontrol ediyorum"><div class="ind"></div>Sık kontrol ediyorum</label>
+          <label class="ro" onclick="handleRadio(this,&#39;aynaya_bakma&#39;,&#39;Aynadan kaçınıyorum&#39;)"><input type="radio" name="aynaya_bakma" value="Aynadan kaçınıyorum"><div class="ind"></div>Aynadan kaçınıyorum</label>
         </div>
       </div>
     </div>
@@ -816,10 +813,10 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
     <div class="field">
       <label>Öğün düzeniniz nasıl?</label>
       <div class="rg" id="ogun-sayisi-rg">
-        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','1-2 öğün')"><input type="radio" name="ogun_sayisi" value="1-2 öğün"><div class="ind"></div>1-2 öğün</label>
-        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','3 öğün')"><input type="radio" name="ogun_sayisi" value="3 öğün"><div class="ind"></div>3 öğün</label>
-        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','3 öğün + ara öğünler')"><input type="radio" name="ogun_sayisi" value="3 öğün + ara öğünler"><div class="ind"></div>3 öğün + ara öğünler</label>
-        <label class="ro" onclick="handleRadio(this,'ogun_sayisi','Düzensiz')"><input type="radio" name="ogun_sayisi" value="Düzensiz"><div class="ind"></div>Düzensiz</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ogun_sayisi&#39;,&#39;1-2 öğün&#39;)"><input type="radio" name="ogun_sayisi" value="1-2 öğün"><div class="ind"></div>1-2 öğün</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ogun_sayisi&#39;,&#39;3 öğün&#39;)"><input type="radio" name="ogun_sayisi" value="3 öğün"><div class="ind"></div>3 öğün</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ogun_sayisi&#39;,&#39;3 öğün + ara öğünler&#39;)"><input type="radio" name="ogun_sayisi" value="3 öğün + ara öğünler"><div class="ind"></div>3 öğün + ara öğünler</label>
+        <label class="ro" onclick="handleRadio(this,&#39;ogun_sayisi&#39;,&#39;Düzensiz&#39;)"><input type="radio" name="ogun_sayisi" value="Düzensiz"><div class="ind"></div>Düzensiz</label>
       </div>
     </div>
   </div>
@@ -859,13 +856,14 @@ footer{background:var(--ink);padding:22px 60px;display:flex;justify-content:spac
       <span style="font-size:13px;font-weight:300;color:#4A3C2C;line-height:1.6;">Kişisel verilerimin yukarıda belirtilen amaçlar doğrultusunda işlenmesini <strong style="color:#1A1410;font-weight:500;">okudum, anladım ve onaylıyorum.</strong></span>
       <input type="checkbox" name="kvkk_onay" id="kvkk-input" value="Onaylandı" style="display:none;">
     </label>
+    <p id="kvkk-error" style="display:none;margin-top:10px;font-size:13px;color:#C0392B;font-weight:400;">⚠ Devam etmek için KVKK metnini onaylamanız gerekmektedir.</p>
   </div>
 </div>
 
 </form><!-- /form -->
 
 <div class="fnav" id="fnav">
-  <button class="btn btn-p" onclick="prev()" id="btnP" disabled>← Önceki</button>
+  <button class="btn btn-p" onclick="prev()" id="btnP" disabled="">← Önceki</button>
   <span class="sc-count">Adım <strong id="scNum">1</strong> / <span id="totalNum">7</span></span>
   <div style="display:flex;gap:10px;">
     <button class="btn btn-n" onclick="next()" id="btnN">Sonraki →</button>
@@ -1003,23 +1001,12 @@ const riskLevel = riskItems.length === 0 ? 'Düşük' : riskItems.length <= 2 ? 
 const riskInput = document.getElementById('risk-skoru-input');
 if(riskInput) riskInput.value = 'Risk Seviyesi: ' + riskLevel + ' | İşaretlenen: ' + (riskItems.join(', ') || 'Yok');
 const kvkk = document.getElementById('kvkk-input');
-  if(kvkk && !kvkk.checked){ alert('Devam etmek için KVKK onayını vermeniz gerekmektedir.'); goTo(5); return; }
-  const name = document.querySelector('[name="ad_soyad"]').value;
-  const email = document.querySelector('[name="email"]').value;
-  if(!name || !email){
-    alert('Lütfen ad soyad ve e-posta alanlarını doldurun.');
-    goTo(0); return;
+
+  if(kvkk && !kvkk.checked){
+    document.getElementById('kvkk-error').style.display='block';
+    return;
   }
-  const hedefler = document.querySelector('[name="hedefler"]').value;
-  if(!hedefler){
-    alert('Lütfen hedefler ve beklentiler alanını doldurun.');
-    goTo(0); return;
-  }
-  const calisma = document.querySelector('input[name="calisma_yeri"]:checked');
-  if(!calisma){
-    alert('Lütfen nerede çalıştığınızı seçin.');
-    goTo(0); return;
-  }
+  document.getElementById('kvkk-error').style.display='none';
   document.querySelectorAll('.fsec').forEach(s => s.style.display='none');
   document.getElementById('fnav').style.display='none';
   document.getElementById('prog').style.display='none';
@@ -1044,5 +1031,6 @@ function toggleKvkk(){
   }
 }
 </script>
-</body>
-</html>
+
+
+</body></html>
